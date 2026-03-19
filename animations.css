@@ -1,0 +1,43 @@
+/* ATIF BASHIR PORTFOLIO v2.0 — animations.css */
+
+@keyframes cornerPulse{0%,100%{border-color:rgba(0,255,231,.6)}50%{border-color:rgba(0,255,231,.2)}}
+.corner{animation:cornerPulse 3s ease-in-out infinite}
+.c-tr,.c-bl{animation-delay:1.5s}
+
+@keyframes shimmer{0%{transform:translateX(-100%) skewX(-15deg)}100%{transform:translateX(300%) skewX(-15deg)}}
+.photo-inner::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(0,255,231,.04),transparent);animation:shimmer 5s ease-in-out infinite;pointer-events:none;z-index:1}
+
+@keyframes barGlow{0%,100%{box-shadow:0 0 8px rgba(0,255,231,.3)}50%{box-shadow:0 0 16px rgba(0,255,231,.6)}}
+.sbar-fill{animation:barGlow 3s ease-in-out infinite}
+
+.float-badge{opacity:0}
+.badge-python{animation:badgeSlideL .6s 1.2s ease forwards,floatBadge 4s 1.8s ease-in-out infinite}
+.badge-fastapi{animation:badgeSlideL .6s 1.5s ease forwards,floatBadge 5s 2.1s ease-in-out infinite}
+.badge-ai{animation:badgeSlideR .6s 1.8s ease forwards,floatBadge 4.5s 2.4s ease-in-out infinite}
+@keyframes badgeSlideL{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes badgeSlideR{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes floatBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+.mobile-nav ul li{opacity:0;transform:translateY(15px);transition:opacity .3s,transform .3s}
+.mobile-nav.open ul li{opacity:1;transform:translateY(0)}
+.mobile-nav.open ul li:nth-child(1){transition-delay:.05s}
+.mobile-nav.open ul li:nth-child(2){transition-delay:.10s}
+.mobile-nav.open ul li:nth-child(3){transition-delay:.15s}
+.mobile-nav.open ul li:nth-child(4){transition-delay:.20s}
+.mobile-nav.open ul li:nth-child(5){transition-delay:.25s}
+.mobile-nav.open ul li:nth-child(6){transition-delay:.30s}
+.mobile-nav.open ul li:nth-child(7){transition-delay:.35s}
+
+@keyframes btnSpin{to{transform:rotate(360deg)}}
+.btn-loading::after{content:'⟳';display:inline-block;animation:btnSpin .8s linear infinite;margin-left:.5rem}
+
+.tl-item{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.tl-item.vis{opacity:1;transform:translateY(0)}
+
+@keyframes statPop{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+.gh-stat-num.pop{animation:statPop .3s ease}
+
+@keyframes blogShimmer{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}
+.blog-card.loading .blog-thumb{animation:blogShimmer 1.5s ease-in-out infinite}
+
+@keyframes matrixDrop{0%{transform:translateY(-100%);opacity:1}80%{opacity:.5}100%{transform:translateY(100vh);opacity:0}}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atif Bashir · Backend Developer & AI/ML Engineer</title>
+  <meta name="description" content="Atif Bashir — Backend Developer, FastAPI Engineer, AI/ML Enthusiast from Punjab, India."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="animations.css"/>
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">ATIF<span>.</span>BASHIR</div>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+      <div class="loader-text" id="loader-text">INITIALIZING SYSTEM...</div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+    </div>
+    <canvas id="loader-canvas"></canvas>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <canvas id="trail-canvas"></canvas>
+
+  <!-- BG LAYERS -->
+  <canvas id="matrix-canvas"></canvas>
+  <div class="grid-bg"></div>
+  <canvas id="particle-canvas"></canvas>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>ATIF<span class="logo-dot">.</span>BASHIR<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">// about</a></li>
+      <li><a href="#projects">// work</a></li>
+      <li><a href="#skills">// skills</a></li>
+      <li><a href="#timeline">// journey</a></li>
+      <li><a href="#github">// github</a></li>
+      <li><a href="#blog">// blog</a></li>
+      <li><a href="#contact">// contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">HIRE ME ↗</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="#about" class="mob-link">// about</a></li>
+      <li><a href="#projects" class="mob-link">// work</a></li>
+      <li><a href="#skills" class="mob-link">// skills</a></li>
+      <li><a href="#timeline" class="mob-link">// journey</a></li>
+      <li><a href="#github" class="mob-link">// github</a></li>
+      <li><a href="#blog" class="mob-link">// blog</a></li>
+      <li><a href="#contact" class="mob-link">// contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge"><span class="badge-dot"></span><span>SYSTEM ONLINE · AVAILABLE FOR WORK</span></div>
+        <p class="hero-greeting">// IDENTITY CONFIRMED · DEV-001</p>
+        <h1 class="hero-name">
+          <span class="glitch" data-text="ATIF BASHIR">ATIF BASHIR</span>
+        </h1>
+        <div class="hero-role-wrap">
+          <span class="role-prefix">&gt;&nbsp;</span>
+          <span id="typed-role"></span>
+          <span class="cursor-blink">█</span>
+        </div>
+        <p class="hero-desc">
+          Backend Developer specializing in <em>Python &amp; FastAPI</em>, passionate about building
+          scalable APIs and secure systems. AI/ML enthusiast on the path of becoming a
+          <em>Machine Learning Engineer</em>.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary"><span>⬡</span> VIEW WORK</a>
+          <button class="btn btn-outline" onclick="openResume()"><span>📄</span> VIEW RESUME</button>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/atifbashir-ju" target="_blank" class="social-link">GH</a>
+          <a href="https://www.linkedin.com/in/atif-bashir-350488397" target="_blank" class="social-link">LI</a>
+          <a href="https://instagram.com/iamatif_bashir" target="_blank" class="social-link">IG</a>
+          <a href="mailto:Atifparay16@gmail.com" class="social-link">EM</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="photo-container">
+          <div class="photo-ring photo-ring-1"></div>
+          <div class="photo-ring photo-ring-2"></div>
+          <div class="photo-ring photo-ring-3"></div>
+          <div class="photo-frame">
+            <div class="photo-inner">
+              <img src="https://media.licdn.com/dms/image/v2/D5603AQExZGaj2yrqXg/profile-displayphoto-crop_800_800/B56ZtpMigWJgAI-/0/1766996459252?e=1775088000&v=beta&t=jwZnnxCSEVbUAQjqEtTOqddUY6odgPeB5ka_1sUxHTk" alt="Atif Bashir" id="profile-photo"/>
+              <div class="photo-overlay"></div>
+              <div class="scan-beam"></div>
+            </div>
+            <div class="corner c-tl"></div><div class="corner c-tr"></div>
+            <div class="corner c-bl"></div><div class="corner c-br"></div>
+            <div class="photo-hud">
+              <div class="hud-row"><span class="hud-key">ID</span><span class="hud-val">ATIF-BASHIR-001</span></div>
+              <div class="hud-row"><span class="hud-key">ROLE</span><span class="hud-val">BACKEND_DEV</span></div>
+              <div class="hud-row"><span class="hud-key">STATUS</span><span class="hud-val neon-green">ACTIVE ●</span></div>
+            </div>
+          </div>
+          <div class="float-badge badge-python"><span>🐍</span><span>Python</span></div>
+          <div class="float-badge badge-fastapi"><span>⚡</span><span>FastAPI</span></div>
+          <div class="float-badge badge-ai"><span>🤖</span><span>AI/ML</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item"><span class="stat-num" data-target="1">0</span><span class="stat-plus">+</span><span class="stat-label">Live Projects</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="12">0</span><span class="stat-plus">+</span><span class="stat-label">Tech in Stack</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="3">0</span><span class="stat-plus"></span><span class="stat-label">Certifications</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="1">0</span><span class="stat-plus">st</span><span class="stat-label">Hackathon Top-3</span></div>
+    </div>
+  </div>
+  <div class="ticker-wrap"><div class="ticker-track" id="ticker"></div></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; bash about.sh</p>
+        <h2 class="section-title">System <span class="accent">Profile</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong class="neon-text">Atif Bashir</strong> — a Backend Developer from Punjab, India specializing in <strong class="neon-text">Python &amp; FastAPI</strong>. I build scalable APIs, secure backend architectures, and real-world applications.</p>
+          <p>I'm an <strong class="pink-text">AI/ML enthusiast</strong> on the journey of becoming a Machine Learning Engineer — actively exploring AI tools to automate workflows and ship smarter solutions.</p>
+          <p>Currently deepening expertise in <strong class="neon-text">Machine Learning, Backend System Design, Cloud Deployment,</strong> and <strong class="neon-text">AI Automation</strong>.</p>
+          <div class="currently-learning">
+            <p class="learn-label">// CURRENTLY LOADING</p>
+            <div class="learn-chips">
+              <span class="learn-chip">Machine Learning</span>
+              <span class="learn-chip">Backend System Design</span>
+              <span class="learn-chip">Cloud Deployment</span>
+              <span class="learn-chip">AI Automation Tools</span>
+            </div>
+          </div>
+        </div>
+        <div class="terminal-wrap reveal">
+          <div class="terminal">
+            <div class="term-titlebar">
+              <div class="term-dots"><span class="tdot red"></span><span class="tdot yellow"></span><span class="tdot green"></span></div>
+              <span class="term-title-text">~/atif-bashir — bash</span>
+              <span></span>
+            </div>
+            <div class="term-body" id="terminal-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; ls -la ./projects</p>
+        <h2 class="section-title">Selected <span class="accent-pink">Work</span></h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card card-featured reveal">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <div class="card-thumb thumb-ai"><div class="thumb-icon">🤖</div><div class="thumb-lines"><span></span><span></span><span></span><span></span></div></div>
+            <div class="card-badge">FEATURED · LIVE</div>
+          </div>
+          <div class="card-body">
+            <p class="card-tag">AI · FULLSTACK · 2025</p>
+            <h3 class="card-title">AI Resume Analyzer</h3>
+            <p class="card-desc">Intelligent resume analysis platform powered by AI. Analyzes resumes, provides actionable feedback, and optimizes content for ATS compatibility. Deployed on Vercel + Render.</p>
+            <div class="card-stack">
+              <span class="stack-chip">Python</span><span class="stack-chip">FastAPI</span><span class="stack-chip">PostgreSQL</span>
+              <span class="stack-chip">Redis</span><span class="stack-chip">Docker</span><span class="stack-chip">JWT</span>
+              <span class="stack-chip">SQLAlchemy</span><span class="stack-chip">Vercel</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="card-status"><span class="status-pulse"></span><span>LIVE</span></div>
+            <div class="card-links">
+              <a href="https://ai-resume-builder-atibashir-jus-projects.vercel.app/" target="_blank" class="card-link link-primary">VISIT SITE ↗</a>
+              <a href="https://github.com/atifbashir-ju" target="_blank" class="card-link link-secondary">CODE ⌥</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card card-upcoming reveal">
+          <div class="upcoming-inner">
+            <div class="upcoming-icon">⚙</div>
+            <h3 class="upcoming-title">More In The Pipeline</h3>
+            <p class="upcoming-desc">Actively building new backend systems and AI-powered tools. Follow on GitHub to watch builds in real time.</p>
+            <div class="upcoming-chips"><span class="stack-chip">FastAPI</span><span class="stack-chip">Machine Learning</span><span class="stack-chip">Automation</span></div>
+            <a href="https://github.com/atifbashir-ju" target="_blank" class="btn btn-outline btn-sm">WATCH ON GITHUB →</a>
+          </div>
+          <div class="upcoming-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS + 3D GLOBE -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; cat stack.json | jq</p>
+        <h2 class="section-title">Tech <span class="accent">Stack</span></h2>
+      </div>
+      <div class="skills-layout">
+        <div class="skill-bars-wrap reveal">
+          <p class="subsection-label">// PROFICIENCY LEVELS</p>
+          <div class="skill-bars" id="skill-bars"></div>
+        </div>
+        <div class="globe-wrap reveal">
+          <p class="subsection-label">// 3D SKILL GLOBE — drag to rotate</p>
+          <canvas id="globe-canvas"></canvas>
+        </div>
+      </div>
+      <div class="stack-categories reveal">
+        <div class="stack-cat"><p class="cat-label">Languages</p><div class="cat-chips"><span>Python</span><span>C</span><span>C++</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
+        <div class="stack-cat"><p class="cat-label">Backend</p><div class="cat-chips"><span>FastAPI</span><span>Uvicorn</span><span>SQLAlchemy</span><span>Alembic</span><span>Passlib</span><span>JWT</span></div></div>
+        <div class="stack-cat"><p class="cat-label">Database &amp; Cache</p><div class="cat-chips"><span>PostgreSQL</span><span>Redis</span></div></div>
+        <div class="stack-cat"><p class="cat-label">DevOps &amp; Tools</p><div class="cat-chips"><span>Docker</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Render</span><span>Vercel</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; git log --oneline journey</p>
+        <h2 class="section-title">My <span class="accent-pink">Journey</span></h2>
+      </div>
+      <div class="timeline" id="timeline-list"></div>
+    </div>
+  </section>
+
+  <!-- GITHUB STATS -->
+  <section id="github" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; curl api.github.com/users/atifbashir-ju</p>
+        <h2 class="section-title">Live <span class="accent">GitHub</span> Stats</h2>
+      </div>
+      <div class="github-layout">
+        <div class="github-stats-grid reveal" id="github-stats"></div>
+        <div class="github-repos reveal">
+          <p class="subsection-label">// REPOSITORIES</p>
+          <div id="github-repos-list"></div>
+        </div>
+      </div>
+      <div class="github-contrib reveal">
+        <p class="subsection-label">// CONTRIBUTION ACTIVITY</p>
+        <div class="contrib-grid" id="contrib-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <section id="certs" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; ls ./certifications</p>
+        <h2 class="section-title">Certs &amp; <span class="accent-pink">Achievements</span></h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card cert-gold reveal">
+          <div class="cert-ribbon">🏆 TOP 3</div>
+          <div class="cert-icon-wrap"><span class="cert-icon">🏆</span></div>
+          <div class="cert-body">
+            <h3 class="cert-title">National Level Hackathon</h3>
+            <p class="cert-issuer">University of Jammu (SIIEDC)</p>
+            <p class="cert-date">📅 Feb 16–17, 2026</p>
+            <p class="cert-desc">Participated in a 2-day national hackathon. Secured a <strong>Top 3 position</strong> among all competing teams.</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon-wrap"><span class="cert-icon">🤖</span></div>
+          <div class="cert-body">
+            <h3 class="cert-title">AI Tools Workshop</h3>
+            <p class="cert-issuer">be10x</p>
+            <p class="cert-date">📅 February 25, 2026</p>
+            <p class="cert-desc">Completed training on AI productivity tools — ChatGPT, data analysis, coding and debugging automation.</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon-wrap"><span class="cert-icon">🐍</span></div>
+          <div class="cert-body">
+            <h3 class="cert-title">Python Using AI Workshop</h3>
+            <p class="cert-issuer">AI For Techies</p>
+            <p class="cert-date">📅 March 1, 2026</p>
+            <p class="cert-desc">Learned to use AI tools to write, debug, and visualize Python code efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; cat ./blog/posts.json</p>
+        <h2 class="section-title">Articles &amp; <span class="accent">Insights</span></h2>
+      </div>
+      <div class="blog-grid" id="blog-grid"></div>
+    </div>
+  </section>
+
+  <!-- RESUME MODAL -->
+  <div class="modal-overlay" id="resume-modal" onclick="closeResume(event)">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-title">📄 ATIF BASHIR — RESUME</span>
+        <button class="modal-close" onclick="closeResume()">✕</button>
+      </div>
+      <div class="resume-viewer">
+        <div class="resume-doc" id="resume-content">
+          <div class="resume-header-section">
+            <h1>ATIF BASHIR</h1>
+            <p class="resume-role">Backend Developer · FastAPI Engineer · AI/ML Enthusiast</p>
+            <div class="resume-contact-row">
+              <span>📧 Atifparay16@gmail.com</span>
+              <span>📞 +91 9103250056</span>
+              <span>📍 Punjab, India</span>
+              <span>🔗 github.com/atifbashir-ju</span>
+            </div>
+          </div>
+          <div class="resume-section">
+            <h2>// ABOUT</h2>
+            <p>Backend Developer specializing in Python & FastAPI. Passionate about building scalable APIs, secure backend systems, and real-world AI-powered applications. Currently learning Machine Learning and Cloud Deployment.</p>
+          </div>
+          <div class="resume-section">
+            <h2>// TECH STACK</h2>
+            <div class="resume-chips">
+              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span>
+              <span>Docker</span><span>SQLAlchemy</span><span>Alembic</span><span>JWT</span>
+              <span>Uvicorn</span><span>Passlib</span><span>Git</span><span>VS Code</span>
+              <span>Render</span><span>Vercel</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+          <div class="resume-section">
+            <h2>// PROJECTS</h2>
+            <div class="resume-item">
+              <div class="resume-item-header"><strong>AI Resume Analyzer</strong><span class="resume-tag">LIVE</span></div>
+              <p>AI-powered resume analysis platform — FastAPI backend + Vercel frontend. Stack: Python, FastAPI, PostgreSQL, Redis, Docker, JWT, SQLAlchemy.</p>
+            </div>
+          </div>
+          <div class="resume-section">
+            <h2>// CERTIFICATIONS</h2>
+            <div class="resume-item"><div class="resume-item-header"><strong>National Hackathon — Top 3</strong><span>University of Jammu · Feb 2026</span></div></div>
+            <div class="resume-item"><div class="resume-item-header"><strong>AI Tools Workshop</strong><span>be10x · Feb 2026</span></div></div>
+            <div class="resume-item"><div class="resume-item-header"><strong>Python Using AI Workshop</strong><span>AI For Techies · Mar 2026</span></div></div>
+          </div>
+          <div class="resume-section">
+            <h2>// CURRENTLY LEARNING</h2>
+            <div class="resume-chips"><span>Machine Learning</span><span>Backend System Design</span><span>Cloud Deployment</span><span>AI Automation</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="printResume()">⬇ DOWNLOAD PDF</button>
+        <button class="btn btn-outline" onclick="closeResume()">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">&gt; ping atif.bashir --open-channel</p>
+        <h2 class="section-title">Open <span class="accent-pink">Channel</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group"><label class="form-label">// YOUR NAME</label><input class="form-input" type="text" placeholder="John Doe" required/></div>
+            <div class="form-group"><label class="form-label">// EMAIL_ADDRESS</label><input class="form-input" type="email" placeholder="user@domain.com" required/></div>
+            <div class="form-group"><label class="form-label">// SUBJECT</label><input class="form-input" type="text" placeholder="Project scope, collaboration..."/></div>
+            <div class="form-group"><label class="form-label">// MESSAGE</label><textarea class="form-input form-textarea" placeholder="Describe your mission..."></textarea></div>
+            <button type="submit" class="btn btn-primary btn-full"><span id="submit-text">TRANSMIT MESSAGE →</span></button>
+          </form>
+        </div>
+        <div class="contact-info reveal">
+          <div class="info-card">
+            <div class="info-item"><div class="info-icon">✉</div><div><p class="info-label">// EMAIL</p><a href="mailto:Atifparay16@gmail.com" class="info-val">Atifparay16@gmail.com</a></div></div>
+            <div class="info-item"><div class="info-icon">📞</div><div><p class="info-label">// PHONE</p><a href="tel:+919103250056" class="info-val">+91 9103250056</a></div></div>
+            <div class="info-item"><div class="info-icon">📍</div><div><p class="info-label">// LOCATION</p><p class="info-val">Punjab (Jammu), India · Remote Worldwide</p></div></div>
+            <div class="info-item"><div class="info-icon">⚡</div><div><p class="info-label">// STATUS</p><p class="info-val neon-green">Available for hire · &lt;24h response</p></div></div>
+          </div>
+          <div class="social-links">
+            <p class="info-label">// FIND ME ON</p>
+            <div class="social-grid">
+              <a href="https://github.com/atifbashir-ju" target="_blank" class="social-card"><span class="social-icon">⌥</span><span class="social-name">GitHub</span><span class="social-handle">@atifbashir-ju</span></a>
+              <a href="https://www.linkedin.com/in/atif-bashir-350488397" target="_blank" class="social-card"><span class="social-icon">◈</span><span class="social-name">LinkedIn</span><span class="social-handle">atif-bashir</span></a>
+              <a href="https://instagram.com/iamatif_bashir" target="_blank" class="social-card"><span class="social-icon">◎</span><span class="social-name">Instagram</span><span class="social-handle">@iamatif_bashir</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">ATIF<span>.</span>BASHIR</div>
+      <p class="footer-copy">© 2026 Atif Bashir · Built from scratch · Punjab, India</p>
+      <div class="footer-badge">BACKEND + AI/ML v2.0</div>
+    </div>
+    <div class="footer-line"></div>
+  </footer>
+
+  <!-- AI CHATBOT -->
+  <button class="chatbot-fab" id="chatbot-fab" onclick="toggleChat()" title="Ask Atif Bot">
+    <span class="fab-icon">🤖</span>
+    <span class="fab-pulse"></span>
+  </button>
+  <div class="chatbot-window" id="chatbot-window">
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <p class="chat-name">Ask Atif Bot</p>
+          <p class="chat-status"><span class="status-dot-green"></span> AI Online</p>
+        </div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot-msg">
+        <span>Hey! 👋 I'm Atif's AI assistant. Ask me anything about his skills, projects, or how to hire him!</span>
+      </div>
+    </div>
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button onclick="quickAsk('What is your tech stack?')">Tech Stack</button>
+      <button onclick="quickAsk('Tell me about your projects')">Projects</button>
+      <button onclick="quickAsk('Are you available for hire?')">Availability</button>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-input" id="chat-input" placeholder="Ask me anything..." onkeydown="if(event.key==='Enter')sendChat()"/>
+      <button class="chat-send" onclick="sendChat()">↗</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
