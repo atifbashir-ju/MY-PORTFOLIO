@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ══ LOADER ══ */
@@ -105,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ══ TYPED ROLE ══ */
   var typedEl = document.getElementById('typed');
   if (typedEl) {
-    var roles = ['Backend Developer', 'FastAPI Engineer', 'Python Specialist', 'AI/ML Enthusiast', 'Tech Student'];
+    var roles = ['Machine Learning Engineer', 'Python & ML Developer', 'MLOps Enthusiast', 'AI/ML Researcher', 'Cybersecurity AI Researcher'];
     var ri = 0, ci = 0, deleting = false;
     function type() {
       var r = roles[ri];
@@ -126,15 +124,15 @@ document.addEventListener('DOMContentLoaded', function () {
   if (termBody) {
     var lines = [
       { t: 'cmd', s: 'whoami' },
-      { t: 'out', s: 'atif.bashir · tech-student · backend-dev' },
+      { t: 'out', s: 'atif.bashir · ml-engineer · jammu-kashmir' },
       { t: 'cmd', s: 'cat location.txt' },
       { t: 'dim', s: 'Jammu & Kashmir, India · Remote Worldwide' },
-      { t: 'cmd', s: 'python --version && fastapi --version' },
-      { t: 'out', s: 'Python 3.11.4 · FastAPI 0.103.1' },
+      { t: 'cmd', s: 'python --version && pip show scikit-learn' },
+      { t: 'out', s: 'Python 3.11.4 · scikit-learn 1.4.0' },
       { t: 'cmd', s: 'ls ./projects' },
-      { t: 'dim', s: 'ai-resume-analyzer/ ai-code-review-bot/' },
+      { t: 'dim', s: 'fraudguard/ zerotrust-siem/' },
       { t: 'cmd', s: 'echo $GOAL' },
-      { t: 'out', s: 'become_ml_engineer=true · open_to_work=true' },
+      { t: 'out', s: 'master_agentic_ai=true · open_to_work=true' },
     ];
     var li = 0, chi = 0;
     function typeTerminal() {
@@ -176,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ══ TICKER ══ */
   var tickerEl = document.getElementById('ticker');
   if (tickerEl) {
-    var items = ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'SQLAlchemy', 'Alembic', 'JWT', 'Uvicorn', 'Passlib', 'Git', 'GitHub', 'VS Code', 'Render', 'Vercel', 'HTML', 'CSS', 'JavaScript', 'C', 'C++', 'AI/ML', 'OpenAI'];
+    var items = ['Python', 'Scikit-learn', 'XGBoost', 'LightGBM', 'Optuna', 'SHAP', 'MLflow', 'PyTorch', 'Pandas', 'NumPy', 'FastAPI', 'Django', 'Docker', 'SQL', 'Matplotlib', 'SciPy', 'Git', 'GitHub', 'C', 'C++', 'Agentic AI', 'LLMs'];
     tickerEl.innerHTML = items.concat(items).map(function (i) {
       return '<span class="ticker-item">' + i + '</span>';
     }).join('');
@@ -207,12 +205,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var skillBarsEl = document.getElementById('skill-bars');
   if (skillBarsEl) {
     var skills = [
-      { name: 'Python & Backend', pct: 88, color: 'linear-gradient(90deg,#6366f1,#8b5cf6)' },
-      { name: 'FastAPI & REST APIs', pct: 85, color: 'linear-gradient(90deg,#ec4899,#8b5cf6)' },
-      { name: 'Database & ORM', pct: 80, color: 'linear-gradient(90deg,#06b6d4,#6366f1)' },
-      { name: 'DevOps & Docker', pct: 75, color: 'linear-gradient(90deg,#f59e0b,#ef4444)' },
-      { name: 'Frontend (HTML/CSS/JS)', pct: 70, color: 'linear-gradient(90deg,#10b981,#06b6d4)' },
-      { name: 'AI / ML (Learning)', pct: 45, color: 'linear-gradient(90deg,#8b5cf6,#ec4899)' },
+      { name: 'Python & ML Pipelines', pct: 90, color: 'linear-gradient(90deg,#6366f1,#8b5cf6)' },
+      { name: 'Scikit-learn / XGBoost / LightGBM', pct: 85, color: 'linear-gradient(90deg,#ec4899,#8b5cf6)' },
+      { name: 'Feature Engineering & SHAP', pct: 80, color: 'linear-gradient(90deg,#06b6d4,#6366f1)' },
+      { name: 'MLflow / Optuna / Docker', pct: 78, color: 'linear-gradient(90deg,#f59e0b,#ef4444)' },
+      { name: 'FastAPI & Django', pct: 75, color: 'linear-gradient(90deg,#10b981,#06b6d4)' },
+      { name: 'Agentic AI & LLMs (Learning)', pct: 45, color: 'linear-gradient(90deg,#8b5cf6,#ec4899)' },
     ];
     skills.forEach(function (s) {
       var row = document.createElement('div');
@@ -236,17 +234,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (techGridEl) {
     var techs = [
       { icon: '🐍', name: 'Python', level: 'EXPERT' },
-      { icon: '⚡', name: 'FastAPI', level: 'EXPERT' },
-      { icon: '🐘', name: 'PostgreSQL', level: 'ADVANCED' },
-      { icon: '🔴', name: 'Redis', level: 'ADVANCED' },
+      { icon: '🌲', name: 'Scikit-learn', level: 'ADVANCED' },
+      { icon: '⚡', name: 'XGBoost', level: 'ADVANCED' },
+      { icon: '💡', name: 'LightGBM', level: 'ADVANCED' },
+      { icon: '🎯', name: 'Optuna', level: 'ADVANCED' },
+      { icon: '🔍', name: 'SHAP', level: 'ADVANCED' },
+      { icon: '📊', name: 'MLflow', level: 'ADVANCED' },
+      { icon: '🔥', name: 'PyTorch', level: 'INTERMEDIATE' },
+      { icon: '🚀', name: 'FastAPI', level: 'ADVANCED' },
+      { icon: '🎸', name: 'Django', level: 'ADVANCED' },
       { icon: '🐳', name: 'Docker', level: 'ADVANCED' },
-      { icon: '🔑', name: 'JWT', level: 'EXPERT' },
-      { icon: '📦', name: 'SQLAlchemy', level: 'ADVANCED' },
-      { icon: '🔄', name: 'Alembic', level: 'ADVANCED' },
-      { icon: '🦄', name: 'Uvicorn', level: 'EXPERT' },
       { icon: '🌿', name: 'Git', level: 'ADVANCED' },
-      { icon: '🌐', name: 'JS/HTML/CSS', level: 'INTERMEDIATE' },
-      { icon: '🔒', name: 'Passlib', level: 'ADVANCED' },
     ];
     techs.forEach(function (t) {
       var node = document.createElement('div');
@@ -261,11 +259,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (timelineEl) {
     var events = [
       { year: '2026', title: 'National Hackathon — Top 3', org: 'University of Jammu (SIIEDC)', desc: '2-day national hackathon. Secured Top 3 among teams from across India.', chips: ['Innovation', 'Problem Solving', 'Teamwork'] },
+      { year: '2026', title: 'ZeroTrust SIEM — R&D', org: 'Personal Project', desc: 'Researching an AI-powered SIEM for real-time threat detection — rule-based + anomaly-based detection, ML for zero-day threats.', chips: ['Python', 'ML', 'Anomaly Detection', 'Cybersecurity'] },
       { year: '2026', title: 'Python Using AI Workshop', org: 'AI For Techies', desc: 'Learned to use AI tools to write, debug, and visualize Python code — 3x faster development.', chips: ['Python', 'AI Tools', 'Automation'] },
       { year: '2026', title: 'AI Tools Workshop', org: 'be10x', desc: 'Completed training on AI productivity tools — ChatGPT, data analysis, coding automation.', chips: ['ChatGPT', 'AI', 'Productivity'] },
-      { year: '2025', title: 'AI Code Review Bot', org: 'Personal Project', desc: 'Built GitHub webhook bot with FastAPI + GPT-4 that auto-reviews PRs.', chips: ['FastAPI', 'OpenAI', 'GitHub API', 'Docker'] },
-      { year: '2025', title: 'AI Resume Analyzer — Live', org: 'Personal Project', desc: 'Built & deployed full-stack AI resume analyzer using FastAPI + PostgreSQL + Redis.', chips: ['FastAPI', 'AI', 'PostgreSQL', 'Vercel'] },
-      { year: '2024', title: 'Started Programming', org: 'University of Jammu', desc: 'Began with C, C++ and fundamentals. Discovered my passion for backend development.', chips: ['C', 'C++', 'Python', 'Basics'] },
+      { year: '2025', title: 'FraudGuard — Fraud Detection System', org: 'Personal Project', desc: 'Built & deployed end-to-end ML pipeline on 284K+ transactions — LightGBM + Optuna, F1: 0.837, SHAP explainability, MLflow tracking.', chips: ['Scikit-learn', 'XGBoost', 'LightGBM', 'SHAP', 'MLflow'] },
+      { year: '2024', title: 'Started Programming', org: 'University of Jammu', desc: 'Began with C, C++ and fundamentals. Discovered my passion for data & machine learning.', chips: ['C', 'C++', 'Python', 'Basics'] },
     ];
     events.forEach(function (ev, idx) {
       var item = document.createElement('div');
@@ -307,8 +305,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   var fallbackRepos = [
-    { name: 'ai-resume-builder', html_url: 'https://github.com/atifbashir-ju', description: 'AI resume analyzer — FastAPI + PostgreSQL + Redis + Docker', language: 'Python', stargazers_count: 5, forks_count: 1 },
-    { name: 'ai-code-review-bot', html_url: 'https://github.com/atifbashir-ju', description: 'GitHub webhook bot — FastAPI + GPT-4 auto-reviews PRs', language: 'Python', stargazers_count: 3, forks_count: 0 },
+    { name: 'FraudGuard---ML--CreditCard-fraud-detection-system', html_url: 'https://github.com/atifbashir-ju/FraudGuard---ML--CreditCard-fraud-detection-system', description: 'Real-time fraud detection — LightGBM + XGBoost + SHAP + MLflow + FastAPI', language: 'Python', stargazers_count: 5, forks_count: 1 },
+    { name: 'zerotrust-siem', html_url: 'https://github.com/atifbashir-ju', description: 'AI-powered SIEM for real-time threat detection — anomaly + rule-based detection', language: 'Python', stargazers_count: 3, forks_count: 0 },
     { name: 'portfolio', html_url: 'https://github.com/atifbashir-ju', description: 'Personal portfolio — HTML + CSS + JavaScript', language: 'JavaScript', stargazers_count: 2, forks_count: 0 },
   ];
 
@@ -422,32 +420,32 @@ document.addEventListener('DOMContentLoaded', function () {
   function getBotReply(q) {
     var ql = q.toLowerCase();
     if (ql.match(/who is|who is he|about atif|tell me about|introduce|atif bashir/))
-      return "👨‍💻 <b>Atif Bashir</b> is a passionate tech student & Backend Developer from <b>Jammu & Kashmir, India</b>. He specializes in <b>Python & FastAPI</b>, building scalable APIs and AI-powered systems. He's an <b>AI/ML enthusiast</b> actively working towards becoming a Machine Learning Engineer — curious, hardworking, and always learning! 🚀";
+      return "👨‍💻 <b>Atif Bashir</b> is a Machine Learning Engineer from <b>Jammu & Kashmir, India</b>. He builds end-to-end ML pipelines — from feature engineering to production deployment — and has shipped a fraud detection system with <b>93.5% precision</b> on 284K+ transactions! 🚀";
     if (ql.match(/where|from|location|jammu|kashmir|india|city|country/))
       return "📍 Atif is from <b>Jammu & Kashmir, India</b> — a beautiful region in northern India! He is available for <b>remote work worldwide</b> and can also work on-site or hybrid.";
     if (ql.match(/student|education|university|college|study|degree/))
-      return "🎓 Atif is a <b>tech student</b> at University of Jammu, J&K, India. He studies computer science while building real-world projects alongside his studies — he firmly believes in learning by doing! 💪";
+      return "🎓 Atif is pursuing a <b>BCA in Data Science</b> at University of Jammu, J&K, India. He studies ML/data science while building real-world production systems alongside his degree — learning by doing! 💪";
     if (ql.match(/stack|tech|language|framework|tool|technology/))
-      return "🛠️ Atif's full tech stack:<br><br>🐍 <b>Languages:</b> Python, C, C++, JS, HTML, CSS<br>⚡ <b>Framework:</b> FastAPI + Uvicorn<br>🐘 <b>Database:</b> PostgreSQL + Redis<br>📦 <b>ORM:</b> SQLAlchemy + Alembic<br>🔑 <b>Auth:</b> JWT + Passlib<br>🐳 <b>DevOps:</b> Docker, Git, GitHub<br>🚀 <b>Deploy:</b> Render + Vercel";
+      return "🛠️ Atif's full tech stack:<br><br>🐍 <b>Languages:</b> Python, C, C++, SQL, JS<br>📊 <b>ML Libraries:</b> Scikit-learn, XGBoost, LightGBM, NumPy, Pandas<br>🎯 <b>ML Tools:</b> MLflow, Optuna, SHAP, PyTorch<br>⚡ <b>Serving:</b> FastAPI + Django<br>🐳 <b>DevOps:</b> Docker, Git, GitHub";
     if (ql.match(/project|work|build|app|system|made|create/))
-      return "🚀 Atif's projects:<br><br>🤖 <b>AI Resume Analyzer</b> — LIVE! AI platform for resume analysis & ATS optimization. Stack: FastAPI + PostgreSQL + Redis + Docker + Vercel<br><br>🔍 <b>AI Code Review Bot</b> — Building! GPT-4 GitHub PR auto-reviewer. Stack: FastAPI + OpenAI + Docker<br><br>Check GitHub: github.com/atifbashir-ju";
+      return "🚀 Atif's projects:<br><br>🛡️ <b>FraudGuard</b> — LIVE! Real-time fraud detection on 284K+ transactions. LightGBM tuned with Optuna — F1: 0.837, AUC-ROC: 0.963, Precision: 93.5%. SHAP + MLflow + FastAPI + Django.<br><br>🔐 <b>ZeroTrust SIEM</b> — R&D! AI-powered SIEM for real-time threat detection, inspired by Wazuh & Splunk.<br><br>Check GitHub: github.com/atifbashir-ju";
     if (ql.match(/ai|ml|machine learning|artificial intelligence|deep learning/))
-      return "🤖 Atif is a huge <b>AI/ML enthusiast</b>! He's actively learning Machine Learning — algorithms, neural networks, model deployment. His dream is to become an <b>ML Engineer</b> and combine his backend skills with AI. He also uses AI tools daily to code 3x faster! 🚀";
+      return "🤖 Atif is a <b>Machine Learning Engineer</b> through and through! He's built production ML systems with Scikit-learn, XGBoost, LightGBM and SHAP explainability, and is now expanding into <b>Agentic AI and LLM-based systems</b>. 🚀";
     if (ql.match(/cert|hackathon|award|win|achieve/))
       return "🏆 Atif's achievements:<br><br>🥇 <b>National Hackathon TOP 3</b> — University of Jammu (Feb 2026)<br>🤖 <b>AI Tools Workshop</b> — be10x (Feb 2026)<br>🐍 <b>Python Using AI Workshop</b> — AI For Techies (Mar 2026)<br><br>He competed with teams from across India and won Top 3! 💪";
     if (ql.match(/hire|available|job|employ|freelance|intern|opportunit/))
-      return "✅ <b>Atif is available for hire!</b><br><br>💼 Open to: Full-time · Freelance · Internship<br>📅 Available: Immediately<br>🌍 Work: Remote / On-site / Hybrid<br>⚡ Response: Under 24 hours<br><br>📧 Atifparay16@gmail.com<br>📞 +91 9103250056";
+      return "✅ <b>Atif is available for hire!</b><br><br>💼 Open to: Full-time · Freelance · Internship<br>📅 Available: Immediately<br>🌍 Work: Remote / On-site / Hybrid<br>⚡ Response: Under 24 hours<br><br>📧 atifparay16@gmail.com<br>📞 +91 9103250056";
     if (ql.match(/contact|email|phone|reach|number|connect/))
-      return "📬 Contact Atif:<br><br>📧 <b>Email:</b> Atifparay16@gmail.com<br>📞 <b>Phone:</b> +91 9103250056<br>🔗 <b>GitHub:</b> github.com/atifbashir-ju<br>💼 <b>LinkedIn:</b> linkedin.com/in/atif-bashir-350488397<br>📸 <b>Instagram:</b> @iamatif_bashir";
+      return "📬 Contact Atif:<br><br>📧 <b>Email:</b> atifparay16@gmail.com<br>📞 <b>Phone:</b> +91 9103250056<br>🔗 <b>GitHub:</b> github.com/atifbashir-ju<br>💼 <b>LinkedIn:</b> linkedin.com/in/atif-bashir-350488397<br>📸 <b>Instagram:</b> @iamatif_bashir";
     if (ql.match(/passion|hobby|interest|personality|like|enjoy|character/))
-      return "😊 Atif is <b>hardworking, curious & passionate</b>! He loves:<br>🔧 Building backend systems<br>🤖 Exploring AI/ML<br>📚 Learning new tech daily<br>💡 Solving complex problems<br>🚀 Deploying real apps<br><br>He never stops improving! 💪";
+      return "😊 Atif is <b>hardworking, curious & passionate</b>! He loves:<br>🤖 Building ML pipelines<br>🛡️ Exploring cybersecurity & AI<br>📚 Learning new tech daily<br>💡 Solving problems with data<br>🚀 Shipping production models<br><br>He never stops improving! 💪";
     if (ql.match(/goal|dream|future|plan|ambition|vision/))
-      return "🎯 Atif's goal: become a <b>Machine Learning Engineer</b>! He wants to combine his strong Python/backend skills with AI to build intelligent, scalable systems that make real-world impact. He works hard every single day! 🚀";
+      return "🎯 Atif's goal: master <b>Agentic AI & LLM-based systems</b> while sharpening his MLOps skills! He wants to build intelligent, explainable, production-grade ML systems that make real-world impact. He works hard every single day! 🚀";
     if (ql.match(/python|fastapi|backend|api|server/))
-      return "🐍 Python & FastAPI are Atif's <b>core expertise</b>! He builds high-performance REST APIs, secure auth systems with JWT, database integration with SQLAlchemy + Alembic, Docker containers, and deploys on Render + Vercel. <b>Expert level!</b> 💪";
+      return "🐍 Python is Atif's <b>core expertise</b>! He builds full ML pipelines — preprocessing, feature engineering, model training with Scikit-learn/XGBoost/LightGBM — and serves them via FastAPI + Django, containerized with Docker. <b>Production-grade!</b> 💪";
     if (ql.match(/hello|hi|hey|sup|hola|namaste|salam/))
       return "Hey! 👋 I'm Atif's AI assistant — I know everything about him!<br><br>You can ask me:<br>• Who is Atif?<br>• His tech stack<br>• His projects<br>• Where is he from?<br>• Available for hire?<br><br>What would you like to know? 🚀";
-    return "🤔 Great question! Atif Bashir is a passionate Backend Developer & AI/ML enthusiast from Jammu & Kashmir, India — building with Python + FastAPI!<br><br>Try asking:<br>• <i>Who is Atif?</i><br>• <i>Tech stack?</i><br>• <i>Available for hire?</i><br><br>Or email him: Atifparay16@gmail.com 📧";
+    return "🤔 Great question! Atif Bashir is a Machine Learning Engineer from Jammu & Kashmir, India — building end-to-end ML pipelines with Python, Scikit-learn, XGBoost & LightGBM!<br><br>Try asking:<br>• <i>Who is Atif?</i><br>• <i>Tech stack?</i><br>• <i>Available for hire?</i><br><br>Or email him: atifparay16@gmail.com 📧";
   }
 
   function addMessage(text, isUser) {
@@ -680,81 +678,79 @@ document.addEventListener('DOMContentLoaded', function () {
     if(!linesEl) return;
 
     var files = {
-      'main.py': {
+      'predict_api.py': {
         lines: [
-          {c:'<span class="cm"># AI Resume Analyzer — FastAPI Backend</span>', d:0},
-          {c:'<span class="kw">from</span> fastapi <span class="kw">import</span> FastAPI, UploadFile, File', d:80},
-          {c:'<span class="kw">from</span> app.services <span class="kw">import</span> ai_service, resume_parser', d:140},
-          {c:'<span class="kw">from</span> app.models <span class="kw">import</span> ResumeAnalysis', d:200},
+          {c:'<span class="cm"># FraudGuard — Fraud Prediction API</span>', d:0},
+          {c:'<span class="kw">from</span> fastapi <span class="kw">import</span> FastAPI', d:80},
+          {c:'<span class="kw">from</span> app.services <span class="kw">import</span> model_loader, shap_service', d:140},
+          {c:'<span class="kw">from</span> app.schemas <span class="kw">import</span> Transaction, FraudResult', d:200},
           {c:'', d:260},
-          {c:'app = <span class="fn">FastAPI</span>(<span class="dt">title</span>=<span class="st">"AI Resume Analyzer"</span>)', d:300},
-          {c:'', d:380},
-          {c:'<span class="kw">@app.post</span>(<span class="st">"/analyze"</span>, response_model=ResumeAnalysis)', d:420},
-          {c:'<span class="kw">async def</span> <span class="fn">analyze_resume</span>(file: <span class="fn">UploadFile</span> = <span class="fn">File</span>(...)):', d:520},
-          {c:'    content = <span class="kw">await</span> file.<span class="fn">read</span>()', d:620},
-          {c:'    parsed = <span class="kw">await</span> resume_parser.<span class="fn">extract</span>(content)', d:720},
-          {c:'    result = <span class="kw">await</span> ai_service.<span class="fn">analyze</span>(parsed)', d:820},
-          {c:'    <span class="kw">return</span> <span class="fn">ResumeAnalysis</span>(**result)', d:920},
+          {c:'app = <span class="fn">FastAPI</span>(<span class="dt">title</span>=<span class="st">"FraudGuard API"</span>)', d:300},
+          {c:'model = model_loader.<span class="fn">load</span>(<span class="st">"lightgbm_v3.pkl"</span>)', d:380},
+          {c:'', d:460},
+          {c:'<span class="kw">@app.post</span>(<span class="st">"/predict"</span>, response_model=FraudResult)', d:500},
+          {c:'<span class="kw">async def</span> <span class="fn">predict</span>(txn: Transaction):', d:600},
+          {c:'    proba = model.<span class="fn">predict_proba</span>([txn.features])[<span class="nm">0</span>][<span class="nm">1</span>]', d:700},
+          {c:'    shap_vals = shap_service.<span class="fn">explain</span>(txn.features)', d:800},
+          {c:'    <span class="kw">return</span> <span class="fn">FraudResult</span>(fraud_proba=proba, shap=shap_vals)', d:900},
         ],
         output: [
           {t:'INFO     uvicorn running on http://0.0.0.0:8000', c:'lc-out-info', d:1200},
-          {t:'INFO     Started reloader process [28720]', c:'lc-out-info', d:1500},
-          {t:'✓  Resume parser loaded', c:'lc-out-success', d:1800},
-          {t:'✓  OpenAI client initialized', c:'lc-out-success', d:2100},
-          {t:'✓  PostgreSQL connected: pool_size=10', c:'lc-out-success', d:2400},
-          {t:'✓  Redis cache ready', c:'lc-out-success', d:2700},
-          {t:'POST /analyze  200 OK  [342ms]', c:'lc-out-url', d:3200},
+          {t:'✓  LightGBM model loaded (v3)', c:'lc-out-success', d:1600},
+          {t:'✓  SHAP explainer initialized', c:'lc-out-success', d:1900},
+          {t:'✓  PostgreSQL connected: pool_size=10', c:'lc-out-success', d:2200},
+          {t:'INFO     Threshold set: 0.787', c:'lc-out-info', d:2500},
+          {t:'POST /predict  200 OK  fraud_proba=0.021  [38ms]', c:'lc-out-url', d:3000},
         ]
       },
-      'models.py': {
+      'train_model.py': {
         lines: [
-          {c:'<span class="kw">from</span> sqlalchemy <span class="kw">import</span> Column, Integer, String, Float, JSON', d:0},
-          {c:'<span class="kw">from</span> app.core.database <span class="kw">import</span> Base', d:80},
-          {c:'', d:140},
-          {c:'<span class="kw">class</span> <span class="fn">ResumeAnalysis</span>(Base):', d:180},
-          {c:'    __tablename__ = <span class="st">"analyses"</span>', d:280},
+          {c:'<span class="kw">import</span> optuna, lightgbm <span class="kw">as</span> lgb', d:0},
+          {c:'<span class="kw">from</span> imblearn.combine <span class="kw">import</span> SMOTETomek', d:80},
+          {c:'<span class="kw">from</span> sklearn.metrics <span class="kw">import</span> f1_score, roc_auc_score', d:140},
+          {c:'', d:200},
+          {c:'X_res, y_res = <span class="fn">SMOTETomek</span>().<span class="fn">fit_resample</span>(X_train, y_train)', d:260},
           {c:'', d:340},
-          {c:'    id       = <span class="fn">Column</span>(<span class="fn">Integer</span>, primary_key=<span class="dt">True</span>)', d:380},
-          {c:'    score    = <span class="fn">Column</span>(<span class="fn">Float</span>, nullable=<span class="dt">False</span>)', d:480},
-          {c:'    keywords = <span class="fn">Column</span>(<span class="fn">JSON</span>)', d:580},
-          {c:'    feedback = <span class="fn">Column</span>(<span class="fn">String</span>(<span class="nm">2000</span>))', d:680},
-          {c:'    ats_pass = <span class="fn">Column</span>(<span class="fn">Boolean</span>, default=<span class="dt">False</span>)', d:780},
+          {c:'<span class="kw">def</span> <span class="fn">objective</span>(trial):', d:380},
+          {c:'    params = {<span class="st">"num_leaves"</span>: trial.<span class="fn">suggest_int</span>(<span class="st">"num_leaves"</span>, <span class="nm">20</span>, <span class="nm">150</span>)}', d:480},
+          {c:'    model = lgb.<span class="fn">LGBMClassifier</span>(**params).<span class="fn">fit</span>(X_res, y_res)', d:600},
+          {c:'    <span class="kw">return</span> <span class="fn">f1_score</span>(y_val, model.<span class="fn">predict</span>(X_val))', d:700},
+          {c:'', d:780},
+          {c:'study = optuna.<span class="fn">create_study</span>(direction=<span class="st">"maximize"</span>)', d:820},
+          {c:'study.<span class="fn">optimize</span>(objective, n_trials=<span class="nm">50</span>)', d:920},
         ],
         output: [
-          {t:'✓  Models validated', c:'lc-out-success', d:1100},
-          {t:'INFO     Running Alembic migrations...', c:'lc-out-info', d:1400},
-          {t:'✓  Table "analyses" created', c:'lc-out-success', d:1700},
-          {t:'✓  Table "users" created', c:'lc-out-success', d:2000},
-          {t:'INFO     Schema up to date', c:'lc-out-info', d:2300},
+          {t:'INFO     Resampled: 385,000 samples (balanced)', c:'lc-out-info', d:1100},
+          {t:'INFO     [Optuna] Trial 12 finished — F1: 0.812', c:'lc-out-info', d:1500},
+          {t:'INFO     [Optuna] Trial 34 finished — F1: 0.829', c:'lc-out-info', d:1900},
+          {t:'✓  Best trial — F1: 0.837 | AUC-ROC: 0.963', c:'lc-out-success', d:2400},
+          {t:'✓  Model logged to MLflow (run_id=a13f9c2)', c:'lc-out-success', d:2800},
         ]
       },
-      'ai_service.py': {
+      'explain.py': {
         lines: [
-          {c:'<span class="kw">from</span> openai <span class="kw">import</span> AsyncOpenAI', d:0},
-          {c:'<span class="kw">from</span> app.core.config <span class="kw">import</span> settings', d:80},
+          {c:'<span class="kw">import</span> shap', d:0},
+          {c:'<span class="kw">from</span> app.core <span class="kw">import</span> model_registry', d:80},
           {c:'', d:140},
-          {c:'client = <span class="fn">AsyncOpenAI</span>(api_key=settings.OPENAI_KEY)', d:180},
-          {c:'', d:260},
-          {c:'<span class="kw">async def</span> <span class="fn">analyze</span>(resume_data: dict) -> dict:', d:300},
-          {c:'    <span class="cm"># Score resume with GPT-4</span>', d:400},
-          {c:'    response = <span class="kw">await</span> client.chat.completions.<span class="fn">create</span>(', d:460},
-          {c:'        model=<span class="st">"gpt-4o"</span>,', d:560},
-          {c:'        messages=[{<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: PROMPT}],', d:650},
-          {c:'        response_format={<span class="st">"type"</span>: <span class="st">"json_object"</span>}', d:740},
-          {c:'    )', d:830},
-          {c:'    <span class="kw">return</span> json.<span class="fn">loads</span>(response.choices[<span class="nm">0</span>].message.content)', d:900},
+          {c:'model = model_registry.<span class="fn">get</span>(<span class="st">"lightgbm_v3"</span>)', d:180},
+          {c:'explainer = shap.<span class="fn">TreeExplainer</span>(model)', d:280},
+          {c:'', d:360},
+          {c:'<span class="kw">def</span> <span class="fn">explain</span>(features: dict) -> dict:', d:400},
+          {c:'    shap_values = explainer.<span class="fn">shap_values</span>([features])', d:520},
+          {c:'    top_features = sorted(shap_values, reverse=<span class="dt">True</span>)[:<span class="nm">5</span>]', d:640},
+          {c:'    <span class="kw">return</span> {<span class="st">"top_features"</span>: top_features}', d:740},
         ],
         output: [
-          {t:'✓  OpenAI GPT-4o client ready', c:'lc-out-success', d:1100},
-          {t:'INFO     Analyzing resume...', c:'lc-out-info', d:1400},
-          {t:'INFO     Score: 87/100', c:'lc-out-info', d:2000},
-          {t:'✓  ATS keywords: 12 matched', c:'lc-out-success', d:2400},
-          {t:'✓  Feedback generated (342 tokens)', c:'lc-out-success', d:2800},
+          {t:'✓  TreeExplainer initialized', c:'lc-out-success', d:1100},
+          {t:'INFO     Computing SHAP values...', c:'lc-out-info', d:1400},
+          {t:'✓  Top feature: transaction_amount (+0.31)', c:'lc-out-success', d:1900},
+          {t:'✓  Top feature: hour_of_day (+0.18)', c:'lc-out-success', d:2300},
+          {t:'INFO     Explanation generated [22ms]', c:'lc-out-info', d:2700},
         ]
       }
     };
 
-    var currentFile = 'main.py';
+    var currentFile = 'predict_api.py';
     var animTimeout = [];
 
     function clearTimeouts(){ animTimeout.forEach(clearTimeout); animTimeout = []; }
@@ -820,14 +816,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var cx = W/2, cy = H/2;
 
     var skills = [
-      {name:'Python',      pct:88, color:'#6366f1'},
-      {name:'FastAPI',     pct:85, color:'#ec4899'},
-      {name:'PostgreSQL',  pct:80, color:'#06b6d4'},
-      {name:'Docker',      pct:75, color:'#f59e0b'},
-      {name:'JavaScript',  pct:70, color:'#10b981'},
-      {name:'AI / ML',     pct:45, color:'#8b5cf6'},
-      {name:'Redis',       pct:80, color:'#ef4444'},
-      {name:'System Design',pct:65, color:'#f97316'},
+      {name:'Python',          pct:90, color:'#6366f1'},
+      {name:'Scikit-learn/XGB',pct:85, color:'#ec4899'},
+      {name:'LightGBM',        pct:85, color:'#06b6d4'},
+      {name:'MLflow/Optuna',   pct:78, color:'#f59e0b'},
+      {name:'SHAP',            pct:75, color:'#10b981'},
+      {name:'FastAPI/Django',  pct:75, color:'#8b5cf6'},
+      {name:'PyTorch',         pct:55, color:'#ef4444'},
+      {name:'Agentic AI/LLMs', pct:40, color:'#f97316'},
     ];
 
     var n = skills.length;
@@ -1029,43 +1025,46 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       whoami: function(){
         return [
-          {t:'Atif Bashir — Backend Developer & AI/ML Enthusiast', c:'hl'},
+          {t:'Atif Bashir — Machine Learning Engineer', c:'hl'},
           {t:'Location: Jammu & Kashmir, India', c:''},
-          {t:'Stack:    Python · FastAPI · PostgreSQL · Redis · Docker', c:''},
+          {t:'Stack:    Python · Scikit-learn · XGBoost · LightGBM · MLflow',  c:''},
           {t:'Status:   Open to work — Full-time / Freelance / Internship', c:'gn'},
         ];
       },
       about: function(){
         return [
           {t:'== ABOUT ATIF BASHIR ==', c:'hl'},
-          {t:'Passionate tech student & Backend Developer from Jammu & Kashmir, India.', c:''},
-          {t:'Specializes in Python & FastAPI — building scalable, secure REST APIs.', c:''},
-          {t:'AI/ML enthusiast on the path of becoming a Machine Learning Engineer.', c:''},
-          {t:'Believes in learning by doing — every project is a step forward.', c:''},
+          {t:'Machine Learning Engineer from Jammu & Kashmir, India.', c:''},
+          {t:'Builds end-to-end ML pipelines — feature engineering to deployment.', c:''},
+          {t:'Shipped FraudGuard: 93.5% precision fraud detection on 284K+ txns.', c:''},
+          {t:'Believes in learning by doing — every model shipped is a step forward.', c:''},
         ];
       },
       skills: function(){
         return [
           {t:'== TECH STACK ==', c:'hl'},
-          {t:'Python           ████████████████████  88%', c:''},
-          {t:'FastAPI          ███████████████████░  85%', c:''},
-          {t:'PostgreSQL       ████████████████░░░░  80%', c:''},
-          {t:'Redis            ████████████████░░░░  80%', c:''},
-          {t:'Docker           ███████████████░░░░░  75%', c:''},
-          {t:'JavaScript       ██████████████░░░░░░  70%', c:''},
-          {t:'AI / ML          █████████░░░░░░░░░░░  45% (learning)', c:'pk'},
+          {t:'Python           ██████████████████░░  90%', c:''},
+          {t:'Scikit-learn/XGB █████████████████░░░  85%', c:''},
+          {t:'LightGBM         █████████████████░░░  85%', c:''},
+          {t:'MLflow / Optuna  ███████████████░░░░░  78%', c:''},
+          {t:'SHAP             ███████████████░░░░░  75%', c:''},
+          {t:'FastAPI/Django   ███████████████░░░░░  75%', c:''},
+          {t:'Agentic AI/LLMs  ████████░░░░░░░░░░░░  40% (learning)', c:'pk'},
         ];
       },
       projects: function(){
         return [
           {t:'== PROJECTS ==', c:'hl'},
-          {t:'[LIVE] AI Resume Analyzer', c:'gn'},
-          {t:'       Stack: FastAPI + PostgreSQL + Redis + Docker + Vercel', c:''},
-          {t:'       URL: ai-resume-builder-atibashir-jus-projects.vercel.app', c:''},
+          {t:'[LIVE] FraudGuard — Fraud Detection System', c:'gn'},
+          {t:'       Stack: Scikit-learn + XGBoost + LightGBM + SHAP + MLflow + FastAPI', c:''},
+          {t:'       Result: F1 0.837 · AUC-ROC 0.963 · Precision 93.5%', c:''},
           {t:'', c:''},
-          {t:'[BUILDING] AI Code Review Bot', c:'yw'},
-          {t:'           Stack: FastAPI + OpenAI GPT-4 + GitHub API + Docker', c:''},
-          {t:'           GitHub: github.com/atifbashir-ju', c:''},
+          {t:'[R&D] ZeroTrust SIEM — AI Threat Detection', c:'yw'},
+          {t:'      Stack: Python + ML + Anomaly Detection + Log Analysis', c:''},
+          {t:'      Site: zerotrust.co.in', c:''},
+          {t:'', c:'building many more projects to sharpen my skills and create real impact.'},
+          
+
         ];
       },
       contact: function(){
@@ -1096,6 +1095,7 @@ document.addEventListener('DOMContentLoaded', function () {
           {t:'Profile:  github.com/atifbashir-ju', c:''},
           {t:'Repos:    5+ public repositories', c:''},
           {t:'Top Lang: Python', c:''},
+          {t:'Pinned:   FraudGuard---ML--CreditCard-fraud-detection-system', c:''},
           {t:'', c:''},
           {t:'Run: curl https://api.github.com/users/atifbashir-ju', c:''},
         ];
@@ -1103,8 +1103,8 @@ document.addEventListener('DOMContentLoaded', function () {
       education: function(){
         return [
           {t:'== EDUCATION ==', c:'hl'},
-          {t:'University: University of Jammu, J&K, India', c:''},
-          {t:'Degree:     Computer Science (B.Tech)', c:''},
+          {t:'University: Jammu University, J&K, India', c:''},
+          {t:'Degree:     BCA — Data Science (Class of 2028)', c:''},
           {t:'', c:''},
           {t:'Certifications:', c:'hl'},
           {t:'[2026] National Hackathon — TOP 3 (Univ. of Jammu)', c:'gn'},
@@ -1115,22 +1115,22 @@ document.addEventListener('DOMContentLoaded', function () {
       goals: function(){
         return [
           {t:'== GOALS & FUTURE PLANS ==', c:'hl'},
-          {t:'Short-term: Master Machine Learning & model deployment', c:''},
-          {t:'Mid-term:   Land ML Engineer / Backend Engineer role', c:''},
-          {t:'Long-term:  Build AI-powered products that make real impact', c:''},
+          {t:'Short-term: Master Agentic AI & LLM-based systems', c:''},
+          {t:'Mid-term:   Land an ML Engineer / MLOps role', c:''},
+          {t:'Long-term:  Build explainable AI products that make real impact', c:''},
           {t:'', c:''},
-          {t:'Currently learning: scikit-learn · neural networks · AWS · GCP', c:'pk'},
+          {t:'Currently learning: Agentic AI · LLMs · MLOps · AWS · GCP', c:'pk'},
         ];
       },
       experience: function(){
         return [
           {t:'== JOURNEY ==', c:'hl'},
           {t:'[2024] Started programming — C, C++, Python basics', c:''},
-          {t:'[2025] Built AI Resume Analyzer (LIVE on Vercel)', c:'gn'},
-          {t:'[2025] Building AI Code Review Bot (FastAPI + GPT-4)', c:'yw'},
+          {t:'[2025] Built FraudGuard — LIVE fraud detection (F1: 0.837)', c:'gn'},
+          {t:'[2026] Researching ZeroTrust SIEM (AI threat detection)', c:'yw'},
           {t:'[2026] Won National Hackathon — Top 3 Position', c:'gn'},
           {t:'[2026] Completed 3 AI/ML certifications', c:''},
-          {t:'[NOW]  Actively learning ML & seeking opportunities', c:'pk'},
+          {t:'[NOW]  Expanding into Agentic AI & LLMs', c:'pk'},
         ];
       },
       ls: function(){
@@ -1138,8 +1138,8 @@ document.addEventListener('DOMContentLoaded', function () {
           {t:'./portfolio/', c:'hl'},
           {t:'├── about/', c:''},
           {t:'├── projects/', c:''},
-          {t:'│   ├── ai-resume-analyzer  [LIVE]', c:'gn'},
-          {t:'│   └── ai-code-review-bot  [BUILDING]', c:'yw'},
+          {t:'│   ├── fraudguard            [LIVE]', c:'gn'},
+          {t:'│   └── zerotrust-siem        [R&D]', c:'yw'},
           {t:'├── skills/', c:''},
           {t:'├── journey/', c:''},
           {t:'├── github/', c:''},
